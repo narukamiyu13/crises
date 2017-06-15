@@ -1,0 +1,576 @@
+/* -------------------------------------
+| fichier style.php
+| -------------------------
+| CONTRIBUTEURS
+|   Auteur: Cédrick Collin
+|   Modifications: Cédrick Collin
+| -------------------------
+| DATES
+|   Création: 2 mai 2017
+|   Dernière Modification: 31 mai 2017
+| -------------------------
+| DESCRIPTION
+|   CSS - Style du site
+|------------------------------------- */
+
+/* ---------- STYLES GÉNÉRAUX ------------- */
+body {
+    overflow-x:hidden;
+    font-family:robotoregular;
+    color:#0f0f0f;
+    background-color:#FCFCFC;
+}
+
+ol, ul {
+    list-style-position: inside;
+}
+
+#container{
+    max-width:650px;
+    margin:0 auto;
+    padding-left:10px;
+    padding-right:10px;
+    
+}
+
+strong {
+    font-weight:bold;
+}
+
+em {
+    font-style: italic;
+}
+
+p span img {
+    margin-right:20px;
+}
+.page-wrap{
+    min-height:100vh;
+    margin-bottom:-65px;
+}
+
+.page-wrap:after{
+    content:"";
+    display:block;
+    height:100px;
+}
+
+#boutonMobile{
+    display:none;
+}
+
+a{
+    text-decoration:none;
+    color:#0F0F0F;
+}
+a:visited{
+    text-decoration:none;
+    color:#0F0F0F;
+}
+
+nav li ul a:hover, footer a:hover{
+    text-decoration:none;
+    color:#573C00;
+    font-weight:bold;
+}
+a:active{
+    text-decoration:none;
+    color:#0F0F0F;
+}
+
+.current a{
+    border-top: 2px solid #C4A485;
+}
+
+header, footer {
+    background-color:#F2EEE6;
+}
+
+nav {
+    margin-top:20px;
+    font-family:robotobold_condensed;
+}
+
+header > p {
+    font-size:1.3em;
+}
+
+nav li {
+    display:inline-block;
+    position:relative;
+    height:30px;
+    padding:0 10px;
+    line-height:30px;
+}
+
+nav li:hover {
+    background-color:#DFDFDF;
+}
+
+nav li ul {
+    position:absolute;
+    left:-60px;
+    display:none;
+    background-color:#DFDFDF;
+    font-family:robotolight;
+}
+
+nav li:hover ul {
+    display:block;
+    line-height:30px;
+}
+
+nav li:hover ul p, nav li:hover ul li {
+    width:200px;
+}
+
+.mobileOnly {
+    display:none;
+}
+
+.mobileOnly:last-of-type p{
+    line-height:20px;
+}
+
+
+header {
+    transition: .5s ease;
+    border-bottom:1px solid #C4A485;
+    text-align:center;
+}
+
+
+footer {
+    height:70px;
+    border-top:1px solid #C4A485;
+    top:70px;
+    width:100%;
+    text-align:center;
+}
+
+footer p{
+    font-family:robotolight;
+    margin-top:3px;
+}
+
+footer p:nth-of-type(2) {
+    margin-top:10px;
+}
+
+footer p:nth-of-type(2) span{
+    font-size:.8em;
+}
+
+footer p a {
+    font-family:robotobold_condensed;
+}
+
+/* ------------Styles de la page d'accueil -------------- */
+
+
+.content {
+    font-family:robotolight;
+}
+
+.temoignage{
+    font-family:robotolight;
+    font-style:italic;
+}
+
+.content img {
+    margin-right:20px;
+}
+
+.temoin{
+    margin-top:20px;
+    font-family:robotolight;
+    text-align: right;
+}
+
+.temoin:before {
+    content: "-";
+}
+
+h2{
+    font-size:2em;
+    font-family:robotocondensed;
+    color: #573C00;
+    margin-top:50px;
+    margin-bottom:20px;
+    padding-bottom:5px;
+    border-bottom:2px solid #573C00;
+}
+
+
+/*  ------------- Styles du bottin ------------ */
+
+h3 {
+    font-family:robotobold_condensed;
+    margin-top:50px;
+}
+
+p.ressource {
+    font-family:robotocondensed;
+    margin-top:10px;
+}
+
+p.ressource span {
+    font-family:robotolight;
+    font-style:italic;
+}
+
+p.ressource:last-of-type{
+    margin-bottom:30px;
+}
+
+#searchRessource{
+    display:block;
+    margin-top:20px;
+    height:50px;
+    width:100%;
+    line-height:50px;
+    font-size:1.1em;
+    font-family:robotolight;
+    padding-left:3px;
+    border:1px solid #A47102;
+}
+
+#searchRessource::-webkit-input-placeholder {
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+#searchRessource::-ms-input-placeholder {
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+#searchRessource:-moz-placeholder {
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+#searchRessource::-moz-placeholder {
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+/*  ------------- Styles de l'historique ------------ */
+
+div.evenement:last-of-type {
+    margin-bottom:50px;
+}
+
+/* ------- Styles du formulaire d'abonnement ------- */
+
+.formulaireAdhesion input[type='radio'], #printInfos input[type='radio']{
+    display:none;
+}
+
+.formulaireAdhesion input[type='radio'] + label,  #printInfos input[type='radio'] + label{
+    vertical-align: middle;
+    margin-right:100px;
+    cursor:pointer;
+}
+
+.formulaireAdhesion input[type='radio'] + label:before,  #printInfos input[type='radio'] + label:before{
+    display:inline-block;
+    vertical-align: middle;
+    content:"\00a0";
+    width:15px;
+    height:15px;
+    border:2px solid #A47102;
+    cursor:pointer;
+    font:16px/1em sans-serif;
+    text-align:center;
+    margin-right:10px;
+} 
+
+.formulaireAdhesion input[type='radio']:checked + label:before,  #printInfos input[type='radio']:checked + label:before{
+    background-color:#A47102;
+    content:"\2713";
+    color:#CFCFCF;
+}
+
+.formulaireAdhesion label span{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    line-height:15px;
+    border:1px solid #A47102;
+    border-radius:50%;
+    text-align:center;
+    vertical-align:middle;
+    color:#A47102;
+    padding:3px;
+
+}
+
+.formulaireAdhesion label span .infobulle {
+    visibility:hidden;
+    position:relative;
+    width:280px;
+    height:105px;
+    padding:15px;
+    text-align:justify;
+    border-radius:0;
+    margin-top:-204px;
+    margin-left:-149px;
+    text-align:left;
+}
+
+.formulaireAdhesion label span .infobulle:before {
+    content: " ";
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-8px;
+    border-width:8px;
+    border-style: solid;
+    border-color: #A47102 transparent transparent transparent;
+
+}
+
+.formulaireAdhesion input[type="text"], .formulaireAdhesion input[type="email"]{
+    height:40px;
+    margin-right:8px;
+    margin-bottom:8px;
+    border:1px solid #A47102;
+    background-color:transparent;
+    font-family:robotolight;
+    padding-left:5px;
+    width:44%;
+    font-size:1.2em;
+}
+
+.formulaireAdhesion label span:hover{
+    background-color:#A47102;
+    color:#FCFCFC;
+}
+
+.formulaireAdhesion label span:hover .infobulle{
+    visibility:visible;
+    background-color:white;
+    color:#0f0f0f;
+}
+
+
+.formulaireAdhesion input[type='text']::-webkit-input-placeholder{
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion input[type='text']::-ms-input-placeholder{
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion input[type='text']::-moz-placeholder{
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion input[type='text']:-moz-placeholder{
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion input[type='email']::-webkit-input-placeholder{
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion input[type='email']::-ms-input-placeholder{
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion input[type='email']::-moz-placeholder{
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion input[type='email']:-moz-placeholder{
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion .legendeFormAdhesion {
+    font-family:robotolight_italic;
+    color:#999;
+}
+
+.formulaireAdhesion span.legendeFormAdhesion {
+    display:inline-block;
+    width:44%;
+}
+
+.formulaireAdhesion form {
+    max-width:550px;
+    margin:0 auto;
+}
+
+.formulaireAdhesion input[name^="tel"],.formulaireAdhesion input[name^="cell"]{
+    width:13.3%;
+}
+
+.formulaireAdhesion input[name='courriel'] {
+    width:91.5%;
+}
+
+.formulaireAdhesion input[name='adresse'] {
+    width:91.5%;
+}
+
+.formulaireAdhesion input[name='ville'] {
+    width:65%;
+}
+.formulaireAdhesion input[name='codePostal'] {
+    width:23%;
+}
+
+.formulaireAdhesion input[type='submit']{
+    display:block;
+    margin:0 auto;
+    height:40px;
+    width:120px;
+    transition:color .2s ease, background-color .2s ease;
+    border:1px solid #A47102;
+    color:#A47102;
+    background-color:transparent;
+    text-align:center;
+    line-height:40px;
+    cursor:pointer;
+    margin-bottom:60px;
+}
+
+.formulaireAdhesion input[type='submit']:hover{
+    color: #FCFCFC;
+    background-color:#A47102;
+}
+
+.formulaireAdhesion input[name="noMembre"] {
+    margin-top:15px;
+    margin-left:50%;
+}
+
+/*  Styles de confirmation de formulaire */
+
+#infos {
+    width:550px;
+    margin:50px auto;
+}
+
+#infos p {
+    margin-top:10px;
+    width:550px;
+    text-align: right;
+}
+
+#infos p span{
+    display:inline-block;
+    width:300px;
+    margin-left:30px;
+    text-align:left;
+}
+
+#print{
+    width:100%;
+    height:300px;
+    float:left;
+    text-align:center;
+}
+
+#print p {
+    margin: 100px 0 50px 0;
+}
+
+#print input {
+    width:200px;
+}
+
+#printInfos {
+    display:none;
+}
+
+/*  Styles du formulaire pour les ouvertures */
+
+#ouverture input[type='text'], #ouverture input[type='email'] {
+    display:block;
+    margin-top:20px;
+    height:50px;
+    width:100%;
+    line-height:50px;
+    font-size:1.1em;
+    font-family:robotolight;
+    padding-left:3px;
+    border:1px solid #A47102;
+}
+
+#ouverture input[type='file'] {
+    width:1px;
+    height:1px;
+    opacity:0;
+    overflow:hidden;
+}
+
+#ouverture input[type='file'] + label, input[type='submit'] {
+    display:inline-block;
+    margin-top:20px;
+    height:50px;
+    width:200px;
+    color:#FCFCFC;
+    background-color:#A47102;
+    border: 1px solid #A47102;
+    cursor:pointer;
+    font-family:robotocondensed;
+    text-align:center;
+    line-height:50px;
+    margin-bottom:50px;
+    margin-right:20px;
+    transition: color .2s ease, background-color .2s ease;
+}
+
+#ouverture input[type='file'] + label:hover,#ouverture  input[type='file']:focus + label{
+    background-color:#925000;
+}
+
+#ouverture input[type='submit'] {
+    background-color:transparent;
+    color:#A47102;
+    width:202px;
+    height:52px;
+    font-size:1em;
+}
+
+#ouverture input[type='submit']:hover {
+    background-color:#A47102;
+    color:#FCFCFC;
+}
+
+.services img {
+    float:left;
+    margin-right:20px;
+    margin-bottom:20px
+}
+
+.services img + p{
+    float:left;
+    max-width:480px;
+}
+
+.services h2{
+    clear:both;
+    margin-top:0;
+    padding-top:50px;
+}
+
+@media screen and (max-width:800px) {
+    nav {
+        font-size:.75em;
+    }
+    
+    .services img + p {
+        max-width:390px;
+    }
+}

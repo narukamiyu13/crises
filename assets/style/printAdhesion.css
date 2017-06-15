@@ -1,0 +1,145 @@
+/* -------------------------------------
+| fichier printAdhesion.css
+| -------------------------
+| CONTRIBUTEURS
+|   Auteur: Cédrick Collin
+|   Modifications: Cédrick Collin
+| -------------------------
+| DATES
+|   Création: 8 mai 2017
+|   Dernière Modification: 8 mai 2017
+| -------------------------
+| DESCRIPTION
+|   CSS - Style d'impression du formulaire d'adhésion/Renouvellement
+|------------------------------------- */
+
+header p, header nav, footer, .formulaireAdhesion{
+    display:none;
+}
+
+header{
+    border-bottom:none;
+}
+
+header img{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.page-wrap {
+    height:auto;
+    min-height: 0;
+}
+
+.page-wrap:after {
+    content:none;
+}
+#printInfos {
+    display:block;
+    margin-top:150px;
+}
+
+#printInfos p span {
+    font-family:robotobold;
+}
+
+#printInfos .print-bottom {
+    margin-top:550px;
+    font-size:.98em;
+}
+
+#printInfos .print-bottom p:nth-of-type(2) {
+    font-weight:500;
+}
+
+#printInfos #radioActif + label {
+    position:fixed;
+    top:350px;
+    left:50px;
+}
+
+#printInfos #radioAffinitaire + label {
+    position:fixed;
+    top:350px;
+    left:350px;
+}
+
+#printInfos #date {
+    position:fixed;
+    top:400px;
+    left:50px;
+}
+
+#printInfos #noMembre {
+    position:fixed;
+    top:400px;
+    left:350px;
+}
+
+#printInfos #prenom {
+    position:fixed;
+    left:50px;
+    top:435px;
+}
+
+#printInfos #nom {
+    position:fixed;
+    left:350px;
+    top:435px;
+}
+
+#printInfos #adresse {
+    position:fixed;
+    left:50px;
+    top:470px;
+}
+
+#printInfos #ville {
+    position:fixed;
+    left:350px;
+    top:470px;
+}
+
+#printInfos #codePostal {
+    position:fixed;
+    left:50px;
+    top:505px;
+}
+
+#printInfos #telResidentiel {
+    position:fixed;
+    left:350px;
+    top:505px;
+}
+
+#printInfos #cell {
+    position:fixed;
+    left:50px;
+    top:540px;
+}
+
+#printInfos #courriel {
+    position:fixed;
+    left:50px;
+    top:575px;
+}
+
+#printInfos .legendeFormAdhesion {
+    position:fixed;
+    left:50px;
+    top:610px;
+}
+
+#printInfos #radioCourriel + label {
+    position:fixed;
+    top:635px;
+    left:50px;
+}
+
+#printInfos #radioPoste + label {
+    position:fixed;
+    top:635px;
+    left:350px;
+}
